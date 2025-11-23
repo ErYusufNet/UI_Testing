@@ -20,3 +20,6 @@ Wait Until Error Message Visible
 
 Verify Error Message Is Correct
     Element Text Should Be    ${ERROR_MESSAGE}    Incorrect username/password.
+
+Close My Browser
+    Close Browser

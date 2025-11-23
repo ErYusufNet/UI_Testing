@@ -3,7 +3,8 @@ Documentation   to validate the login form
 Library    SeleniumLibrary
 Library    String
 Resource     ../Resources/Keywords.robot
-
+Test Setup
+Test Teardown      Close My Browser
 
 *** Test Cases ***
 Validate UnSuccesful Login
