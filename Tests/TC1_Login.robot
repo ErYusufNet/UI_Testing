@@ -1,19 +1,20 @@
 *** Settings ***
 Documentation   to validate the login form
 Library    SeleniumLibrary
-Library    String
-Resource     ../Resources/Keywords.robot
-Test Setup
-Test Teardown      Close My Browser
+Resource   ../Resources/Keywords.robot
+Test Setup      TC2 Valid Login
+Test Teardown    Close My Browser
 
 *** Test Cases ***
-Validate UnSuccesful Login
-#    set selenium speed    1 seconds
+
+#TC1 Invalid Login
+#    Open Browser With Mortgage URL
+#    Fill The Login Form    ${VALID_USER}    ${INVALID_PASS}
+#    Wait Until Error Message Visible
+#    Verify Error Message Is Correct
+TC2 Valid Login
     Open Browser With Mortgage URL
-    Maximize Browser Window
-    Fill the login form
-    Wait Until Error Message Visible
-    verify error message is correct
-
-
+    Fill The Login Form    ${VALID_USERNAME}    ${VALID_PASS}
+    Sleep    2
+    # burada login sonrası page assertion yazabilirsin
 
